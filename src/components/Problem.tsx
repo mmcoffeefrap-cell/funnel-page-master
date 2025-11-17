@@ -1,50 +1,55 @@
-import { AlertCircle, TrendingDown, Clock } from "lucide-react";
+import { AlertCircle } from "lucide-react";
+import reviewKatrina from "@/assets/review-katrina.png";
+import reviewEmily from "@/assets/review-emily.png";
 
 const Problem = () => {
-  const problems = [
-    {
-      icon: AlertCircle,
-      title: "Struggling with Results?",
-      description: "Traditional methods are outdated and ineffective. You deserve better outcomes without the frustration."
-    },
-    {
-      icon: TrendingDown,
-      title: "Wasting Time & Money?",
-      description: "Stop throwing resources at solutions that don't work. Get real results that justify your investment."
-    },
-    {
-      icon: Clock,
-      title: "Running Out of Time?",
-      description: "Every day without the right solution is a missed opportunity. The longer you wait, the harder it gets."
-    }
-  ];
-
   return (
-    <section className="py-24 bg-muted">
+    <section className="py-24 bg-destructive/5">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Are You Facing These Challenges?
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-destructive/10 text-destructive px-4 py-2 rounded-full mb-6">
+            <AlertCircle className="w-5 h-5" />
+            <span className="font-semibold">The Cleaning Struggle Is Real</span>
+          </div>
+          
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+            Tired of Harsh Chemicals, Scrubbing for Hours, and Surfaces That Never Look Clean?
           </h2>
-          <p className="text-xl text-muted-foreground">
-            You're not alone. These common problems have been holding people back for too long.
+          
+          <p className="text-xl text-muted-foreground leading-relaxed mb-12">
+            Traditional cleaning methods are exhausting, time-consuming, and expose your family to harmful chemicals. There has to be a better way...
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {problems.map((problem, index) => (
-            <div 
-              key={index}
-              className="bg-card p-8 rounded-2xl shadow-elevated hover:shadow-xl transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="w-14 h-14 bg-destructive/10 rounded-xl flex items-center justify-center mb-6">
-                <problem.icon className="w-7 h-7 text-destructive" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">{problem.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{problem.description}</p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <img 
+              src={reviewKatrina} 
+              alt="Before and after couch cleaning results showing dramatic dirt removal" 
+              className="w-full h-auto rounded-2xl shadow-elevated"
+            />
+            <img 
+              src={reviewEmily} 
+              alt="Before and after shower tile cleaning showing spotless results" 
+              className="w-full h-auto rounded-2xl shadow-elevated"
+            />
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-card p-6 rounded-xl border border-destructive/20">
+              <div className="text-4xl mb-3">🧪</div>
+              <h3 className="font-bold text-foreground mb-2">Harsh Chemicals</h3>
+              <p className="text-muted-foreground text-sm">Toxic cleaners that harm your family and the environment</p>
             </div>
-          ))}
+            <div className="bg-card p-6 rounded-xl border border-destructive/20">
+              <div className="text-4xl mb-3">💪</div>
+              <h3 className="font-bold text-foreground mb-2">Endless Scrubbing</h3>
+              <p className="text-muted-foreground text-sm">Hours of exhausting physical labor that leaves you drained</p>
+            </div>
+            <div className="bg-card p-6 rounded-xl border border-destructive/20">
+              <div className="text-4xl mb-3">😞</div>
+              <h3 className="font-bold text-foreground mb-2">Poor Results</h3>
+              <p className="text-muted-foreground text-sm">Dirt and stains that just won't come out no matter what you try</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
