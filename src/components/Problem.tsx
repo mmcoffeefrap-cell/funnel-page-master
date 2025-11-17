@@ -1,6 +1,9 @@
 import { AlertCircle } from "lucide-react";
 import reviewKatrina from "@/assets/review-katrina.png";
 import reviewEmily from "@/assets/review-emily.png";
+import painPoint1 from "@/assets/pain-point-1.png";
+import painPoint2 from "@/assets/pain-point-2.png";
+import painPoint3 from "@/assets/pain-point-3.png";
 
 const Problem = () => {
   return (
@@ -33,21 +36,27 @@ const Problem = () => {
             />
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-card p-6 rounded-xl border border-destructive/20">
-              <div className="text-4xl mb-3">🧪</div>
-              <h3 className="font-bold text-foreground mb-2">Harsh Chemicals</h3>
-              <p className="text-muted-foreground text-sm">Toxic cleaners that harm your family and the environment</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="animate-fade-in">
+              <img 
+                src={painPoint1} 
+                alt="Pain Point 1: Harsh chemicals around kids and pets - Steam cleaner solution provides chemical-free cleaning" 
+                className="w-full h-auto rounded-2xl shadow-elevated"
+              />
             </div>
-            <div className="bg-card p-6 rounded-xl border border-destructive/20">
-              <div className="text-4xl mb-3">💪</div>
-              <h3 className="font-bold text-foreground mb-2">Endless Scrubbing</h3>
-              <p className="text-muted-foreground text-sm">Hours of exhausting physical labor that leaves you drained</p>
+            <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <img 
+                src={painPoint2} 
+                alt="Pain Point 2: Can't reach tight corners - 22.4-inch bendable hose reaches difficult areas" 
+                className="w-full h-auto rounded-2xl shadow-elevated"
+              />
             </div>
-            <div className="bg-card p-6 rounded-xl border border-destructive/20">
-              <div className="text-4xl mb-3">😞</div>
-              <h3 className="font-bold text-foreground mb-2">Poor Results</h3>
-              <p className="text-muted-foreground text-sm">Dirt and stains that just won't come out no matter what you try</p>
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <img 
+                src={painPoint3} 
+                alt="Pain Point 3: Heavy equipment - Compact handheld design with 9-foot power cord" 
+                className="w-full h-auto rounded-2xl shadow-elevated"
+              />
             </div>
           </div>
         </div>

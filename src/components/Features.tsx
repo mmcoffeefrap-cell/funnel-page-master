@@ -2,6 +2,8 @@ import { Zap, Droplets, Flame, Shield, PackageOpen, Sparkles } from "lucide-reac
 import tankCapacity from "@/assets/tank-capacity.png";
 import accessories from "@/assets/accessories.png";
 import productFeatures from "@/assets/product-features.png";
+import versatileUses from "@/assets/versatile-uses.png";
+import ecoFriendly from "@/assets/eco-friendly.png";
 
 const Features = () => {
   const features = [
@@ -63,6 +65,23 @@ const Features = () => {
               <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="animate-fade-in">
+            <img 
+              src={versatileUses} 
+              alt="8 Tools. 1 Cleaner. Endless Possibilities - Use on windows, upholstery, tight corners and more" 
+              className="w-full h-auto rounded-2xl shadow-elevated"
+            />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <img 
+              src={ecoFriendly} 
+              alt="Eco-Friendly and Water-Saving steam cleaning - Protects the planet while cleaning" 
+              className="w-full h-auto rounded-2xl shadow-elevated"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
