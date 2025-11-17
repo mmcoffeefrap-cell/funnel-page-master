@@ -1,36 +1,39 @@
-import { Zap, Shield, Target, Sparkles, Rocket, Heart } from "lucide-react";
+import { Zap, Droplets, Flame, Shield, PackageOpen, Sparkles } from "lucide-react";
+import tankCapacity from "@/assets/tank-capacity.png";
+import accessories from "@/assets/accessories.png";
+import productFeatures from "@/assets/product-features.png";
 
 const Features = () => {
   const features = [
     {
       icon: Zap,
-      title: "Instant Results",
-      description: "See measurable improvements from day one. No more waiting months for results that never come."
+      title: "Fast Heating in 3-5 Minutes",
+      description: "Pressurized steam cleaner heats up quickly and releases 275°F high-temperature steam with 3 BAR pressure and 1050W power."
+    },
+    {
+      icon: Droplets,
+      title: "500ML Large Water Tank",
+      description: "Extended cleaning sessions with 350ml recommended fill. Continuous steam for 10-15 minutes without refills."
+    },
+    {
+      icon: Flame,
+      title: "Chemical-Free Deep Cleaning",
+      description: "High-temperature steam deeply sanitizes and eliminates dirt and grime. Perfect for grout, tiles, upholstery, and more."
     },
     {
       icon: Shield,
-      title: "100% Guaranteed",
-      description: "Risk-free with our money-back guarantee. If you're not satisfied, we'll refund every penny."
+      title: "Safe & Lightweight",
+      description: "Portable design that's easy to carry anywhere. Safe for your family, pets, and the environment - just water!"
     },
     {
-      icon: Target,
-      title: "Proven System",
-      description: "Backed by research and trusted by industry leaders. This isn't theory - it's results."
+      icon: PackageOpen,
+      title: "13+ Premium Attachments",
+      description: "Complete cleaning kit with extension nozzle, brushes, cloths, funnel, and measuring cup. Ready for any surface."
     },
     {
       icon: Sparkles,
-      title: "Easy to Use",
-      description: "No technical skills required. Simple, intuitive, and designed for everyone."
-    },
-    {
-      icon: Rocket,
-      title: "Fast Implementation",
-      description: "Get started in minutes, not hours. We've removed all the complexity and friction."
-    },
-    {
-      icon: Heart,
-      title: "24/7 Support",
-      description: "Our dedicated team is always here to help. You're never alone on this journey."
+      title: "Multi-Surface Versatility",
+      description: "Works on walls, windows, mattresses, cabinets, furniture, couches, cars, showers, and more. One tool, endless uses."
     }
   ];
 
@@ -39,14 +42,14 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Why Thousands Choose Us
+            Everything You Need for Professional Cleaning
           </h2>
           <p className="text-xl text-muted-foreground">
-            Everything you need to succeed, all in one powerful solution.
+            Powerful steam technology meets versatile design for spotless results.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {features.map((feature, index) => (
             <div 
               key={index}
@@ -60,6 +63,30 @@ const Features = () => {
               <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="animate-fade-in">
+            <img 
+              src={tankCapacity} 
+              alt="500ML water tank with measurement markings - recommended 350ML capacity" 
+              className="w-full h-auto rounded-2xl shadow-elevated"
+            />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <img 
+              src={accessories} 
+              alt="Complete 13+ accessories kit including nozzles, brushes, and cleaning cloths" 
+              className="w-full h-auto rounded-2xl shadow-elevated"
+            />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <img 
+              src={productFeatures} 
+              alt="Lightweight portable steam cleaner with chemical-free cleaning up to 220°F" 
+              className="w-full h-auto rounded-2xl shadow-elevated"
+            />
+          </div>
         </div>
       </div>
     </section>

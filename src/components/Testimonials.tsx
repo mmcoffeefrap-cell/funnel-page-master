@@ -1,23 +1,26 @@
 import { Star } from "lucide-react";
+import reviewKelly from "@/assets/review-kelly.png";
+import reviewBrandy from "@/assets/review-brandy.png";
+import reviewBob from "@/assets/review-bob.png";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Marketing Director",
-      content: "This product completely transformed how we operate. Within just 2 weeks, we saw a 300% increase in efficiency. Absolutely incredible!",
+      name: "Kelly H.",
+      image: reviewKelly,
+      content: "I've used it on everything from my kitchen counters to my car seats, and the results are amazing every time. It's lightweight, easy to carry, and the steam power is no joke!",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      role: "Entrepreneur",
-      content: "I was skeptical at first, but the results speak for themselves. Best investment I've made in my business this year. Highly recommend!",
+      name: "Brandy W.",
+      image: reviewBrandy,
+      content: "This steam cleaner exceeded my expectations! It easily removed old stains from my sofa and made my bathroom tiles sparkle like new. Love that it's chemical-free and safe for my kids.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      role: "Freelance Consultant",
-      content: "The support team is amazing and the product delivers exactly what it promises. I can't imagine going back to the old way of doing things.",
+      name: "Bob S.",
+      image: reviewBob,
+      content: "Surprisingly strong steam for such a compact device. It's made cleaning grout and hard-to-reach places so much easier. Plus, no chemicals—just water!",
       rating: 5
     }
   ];
@@ -27,10 +30,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Hear From Our Happy Customers
+            Join 45,000+ Happy Customers
           </h2>
           <p className="text-xl text-muted-foreground">
-            Real people, real results. See what our customers are saying.
+            Real people, real results. See why they love Solasta.
           </p>
         </div>
 
@@ -38,25 +41,23 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-card p-8 rounded-2xl shadow-elevated hover:shadow-xl transition-all duration-300 animate-fade-in"
+              className="bg-card rounded-2xl shadow-elevated hover:shadow-xl transition-all duration-300 animate-fade-in overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                ))}
-              </div>
-              <p className="text-foreground mb-6 leading-relaxed italic">"{testimonial.content}"</p>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">
-                    {testimonial.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+              <img 
+                src={testimonial.image} 
+                alt={`${testimonial.name} review with steam cleaner`} 
+                className="w-full h-auto"
+              />
+              <div className="p-6">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  ))}
                 </div>
-                <div>
-                  <div className="font-semibold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                </div>
+                <p className="text-foreground mb-4 leading-relaxed">"{testimonial.content}"</p>
+                <div className="font-semibold text-foreground">{testimonial.name}</div>
+                <div className="text-sm text-muted-foreground">Verified Customer</div>
               </div>
             </div>
           ))}
