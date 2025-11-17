@@ -8,24 +8,20 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "How quickly will I see results?",
-      answer: "Most customers start seeing measurable improvements within the first week. However, the timeline can vary based on your specific situation and how consistently you apply the system."
+      question: "What types of surfaces can this steam cleaner be used on?",
+      answer: "This steam cleaner is multipurpose and safe for use on a wide variety of surfaces, including sinks, stoves, countertops, tiles, windows, mattresses, fabrics, toys, and more. It's suitable for both hard and soft surfaces."
     },
     {
-      question: "Is there a money-back guarantee?",
-      answer: "Absolutely! We offer a 30-day money-back guarantee. If you're not completely satisfied with your results, simply contact our support team for a full refund - no questions asked."
+      question: "Is this steam cleaner safe to use around children and pets?",
+      answer: "Yes, it features a child lock and safety cap to prevent accidental opening. Since it operates without harmful chemicals or fumes, it's safe for use in homes with kids and pets."
     },
     {
-      question: "Do I need any technical skills?",
-      answer: "Not at all! Our product is designed for everyone, regardless of technical background. We provide step-by-step guidance and our support team is always available to help."
+      question: "What accessories are included with the product?",
+      answer: "The cleaner comes with 8 accessories: a measuring cup, funnel, window cleaning tool, round nylon brush, upholstery tool, standard nozzle, towel sleeve, bent nozzle, and a 22.4-inch flexible hose with gun nozzle for versatile cleaning."
     },
     {
-      question: "How is this different from competitors?",
-      answer: "Unlike other solutions, we focus on delivering real, measurable results backed by proven research. Plus, our 24/7 support and comprehensive guarantee make us the safest choice."
-    },
-    {
-      question: "What kind of support do you offer?",
-      answer: "We provide 24/7 email and chat support, comprehensive documentation, video tutorials, and access to our exclusive community of users. You're never alone on your journey."
+      question: "Does this steam cleaner require any chemical detergents?",
+      answer: "No, it uses only water to generate high-pressure steam. It provides a 100% natural, chemical-free cleaning experience, making it safe for children, pets, and allergy-sensitive households."
     }
   ];
 
